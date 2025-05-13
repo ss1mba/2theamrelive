@@ -1,0 +1,36 @@
+/* Image Container to control hover behavior */
+.image-container {
+  position: relative;
+  width: 300px; /* Set your desired width */
+  height: auto;
+  overflow: hidden;
+  cursor: url('images/cursor2.png'), auto; /* 👈 Custom cursor added */
+}
+
+.image-normal,
+.image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10; /* Added z-index to ensure image visibility */
+}
+
+.image-hover {
+  opacity: 0;
+}
+
+.image-container:hover .image-normal {
+  opacity: 0;
+}
+
+.image-container:hover .image-hover {
+  opacity: 1;
+}
+
+.intro-image img {
+  max-width: 100%;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}

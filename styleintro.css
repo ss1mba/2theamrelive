@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'UnifrakturMaguntia', cursive;
+  cursor: url('images/cursor2.png'), auto; /* custom PNG cursor */
+}
+
+#logo-container {
+  text-align: center;
+  position: relative;
+}
+
+#logo-text {
+  font-size: 4rem;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#logo-container:hover #logo-text {
+  opacity: 1;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+  50% { text-shadow: 0 0 15px #fff, 0 0 30px #fff; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+}
+
+#subtext {
+  margin-top: 10px;
+  color: #ffffffcc;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: 0 0 4px #ffffff22, 0 0 6px #ffffff11;
+  letter-spacing: 1px;
+}
